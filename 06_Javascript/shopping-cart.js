@@ -37,7 +37,7 @@ function createShoppingCart() {
             },0)
         },
         isEmpty(){
-            return items.length===0
+            return items.length===0             
         },
         applyDiscount(value){
             

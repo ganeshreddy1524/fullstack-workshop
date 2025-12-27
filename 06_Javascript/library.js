@@ -74,26 +74,39 @@ function createLibrary() {
             return memberHistory.filter(h => h.memberId === memberId);
         },
         getOverdueBooks() {
-    const MAX_DAYS = 14;   // ← 14 days overdue limit
-    const today = new Date();
+            const MAX_DAYS = 14;   
+            const today = new Date();
 
-    return memberHistory.filter(record => {
-        // ignore returned books
-        if (record.returnedAt !== null) return false;
+            return memberHistory.filter(record => {
+                
+                if (record.returnedAt !== null) return false;
 
-        const borrowedDate = new Date(record.borrowedAt);
-        const daysBorrowed = Math.floor(
-            (today - borrowedDate) / (1000 * 60 * 60 * 24)
-        );
+                const borrowedDate = new Date(record.borrowedAt);
+                const daysBorrowed = Math.floor(
+                    (today - borrowedDate) / (1000 * 60 * 60 * 24)
+                );
 
-        return daysBorrowed > MAX_DAYS;
-    });
-}
+                return daysBorrowed > MAX_DAYS;
+            });
+        },
+        searchBooks(title){
+          
+            const result=books.filter(book=>{
+                const matchTitle=title?book.title.toLowerCase().includes(title.toLowerCase())||book.author.toLowerCase().includes(title.toLowerCase()):true;
+                
+                return matchTitle
+            })
+            if(!result)
+                return 'book not found'
+            else
+                return result
+        }
 
     };
 }
 const library=createLibrary();
 library.addBook({ isbn: '123', title: '1984', author: 'Orwell', copies: 3 })
+library.addBook({ isbn: '456', title: 'Dune', author: 'Herbert', copies: 2 });
 console.log(library.getAvailableCopies('123'));
 library.addMember({ id: 'M1', name: 'John', email: 'john@example.com' })
 library.addMember({ id: 'M2', name: 'Jane', email: 'jane@example.com' });
@@ -102,3 +115,4 @@ console.log(library.borrowBook('M1', '123'));
 
 console.log(library.getMemberHistory('M1'));
 console.log(library.getOverdueBooks());
+console.log(library.searchBooks('Orwell'));
