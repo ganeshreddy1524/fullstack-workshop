@@ -1,0 +1,1 @@
+select e.id,e.name,e.department  from employees e left join assignments p on e.id=p.employee_id where p.employee_id is null

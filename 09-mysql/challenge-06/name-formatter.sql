@@ -1,0 +1,1 @@
+select concat(last_name,', ',first_name) as formatted_name,concat(first_name,'.',last_name,'@gmail.com') as email,concat(substring(first_name,1,1),substring(last_name,1,1)) as initials from employee
