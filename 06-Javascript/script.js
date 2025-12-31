@@ -1,17 +1,25 @@
-console.log('Hello from external file!');
-console.log({Name:'ganesh',age:21})
-console.table([{Name:'ganesh',age:21},{Name:'ganesh',age:26}]);
+const runApp = () => {
+    console.log('Hello from external file!');
+    console.log({ Name: 'ganesh', age: 21 });
 
+    const users = [
+        { Name: 'ganesh', age: 21 },
+        { Name: 'ganesh', age: 26 }
+    ];
 
-let age=23;
-// console.log(`${Name} is ${age} years old `);
-// console.log(Name+"is"+"age"+"years old");
+    console.table(users);
 
-// console.log('Name: %s, Age: %d', Name, age);
+    let age = 23;
 
-let Name=prompt("what is your name")
+    let Name = prompt("What is your name");
+    let colour = prompt("What is your favorite color?");
 
-// alert(Name)
-let colour=prompt("What is your favorite color?")
+    alert(`Welcome ${Name} to India`);
 
-alert(`welcome ${Name} to india` )
+    // Array method usage (review suggestion)
+    users.map(user =>
+        console.log(`User: ${user.Name}, Age: ${user.age}`)
+    );
+};
+
+runApp();
