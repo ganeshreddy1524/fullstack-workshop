@@ -1,19 +1,19 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-31 10:52
+**Review Date:** 2026-01-02 13:55
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 6
+**Files submitted:** 12
 
 ### Relevance Check
 
 ❌ **Submission does NOT match exercise requirements**
    Expected keywords: customer product category order ecommerce schema queries
-   Found only: order 
+   Found only: category order 
    **Please review the exercise requirements and resubmit**
 
 ### ⚠️ Review Skipped
@@ -27,15 +27,47 @@ Please complete the correct exercise and resubmit.
 
 ## Challenge
 
-**Status:** ✅ Submitted (1 files)
+**Status:** ✅ Submitted (12 files)
 
 ### Challenge Relevance Check
 
-⚠️ Submission partially matches exercise requirements
-   Found: employee department salary 
-   Missing: project assignment 
+✅ Submission appears relevant to the exercise
+   Found keywords: employee department salary project assignment 
 
 ### Challenge Code Review
+
+📄 **assignment-validation-trigger.sql**
+   Lines: 38
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **budget-utilization.sql**
+   Lines: 26
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **date-report-function.sql**
+   Lines: 33
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
 
 📄 **department-stats.sql**
    Lines: 8
@@ -51,7 +83,103 @@ Please complete the correct exercise and resubmit.
 
    **Score: 5/5**
 
-### Challenge Score: 5 / 5 (100%)
+📄 **employee-hierarchy.sql**
+   Lines: 2
+
+    📋 **Challenge 2: Employee Hierarchy**
+    Expected: employee_name, manager_name (self-join)
+
+    - ✅ Uses self-join on employees table
+    - ⚠️ Consider LEFT JOIN to show employees without managers
+    - ✅ Joins on manager_id = id
+    - ✅ Uses table aliases
+
+   **Score: 3/4**
+
+📄 **name-formatter.sql**
+   Lines: 2
+
+    📋 **Challenge 6: Employee Name Formatter**
+    Expected: formatted_name, email, initials (string functions)
+
+    - ✅ Uses UPPER() function
+    - ✅ Uses CONCAT() for string building
+    - ⚠️ Missing LEFT() for extracting initials
+    - ✅ Generates email format
+
+   **Score: 3/4**
+
+📄 **project-workload.sql**
+   Lines: 6
+
+    📋 **Challenge 3: Project Workload**
+    Expected: project_name, budget, team_size, total_hours
+
+    - ✅ Joins projects with assignments
+    - ✅ Counts team members
+    - ✅ Sums allocated hours
+    - ✅ Filters budget > 50000
+    - ✅ Orders by total hours descending
+
+   **Score: 5/5**
+
+📄 **salary-adjustment.sql**
+   Lines: 17
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **salary-audit-trigger.sql**
+   Lines: 31
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **tenure-function.sql**
+   Lines: 17
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+
+   **Score: 2/3**
+
+📄 **top-earners.sq.sql**
+   Lines: 18
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **unassigned-resources.sql**
+   Lines: 0
+
+    📋 **Challenge 5: Unassigned Resources**
+    Expected: id, name, department (employees not in any project)
+
+    - ✅ Uses LEFT JOIN with assignments
+    - ✅ Checks for NULL (unassigned employees)
+    - ✅ References employee_id for join
+    - ✅ Selects required columns (id, name, department)
+
+   **Score: 4/4**
+
+### Challenge Score: 40 / 43 (93%)
 
 
 ---
