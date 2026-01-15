@@ -1,0 +1,13 @@
+LOG SUMMARY
+============
+Total Entries: 20
+
+Count by Level:
+ERROR: 3
+INFO: 13
+WARN: 4
+
+Errors:
+2024-01-15T10:31:02 - Database connection failed
+2024-01-15T10:36:02 - Failed to send email
+2024-01-15T10:37:21 - Disk write failure

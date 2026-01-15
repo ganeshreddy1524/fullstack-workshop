@@ -1,0 +1,20 @@
+2024-01-15 10:30:45 INFO User login: alice@email.com
+2024-01-15 10:31:02 ERROR Database connection failed
+2024-01-15 10:32:15 WARN High memory usage: 85%
+2024-01-15 10:32:30 INFO User logout: alice@email.com
+2024-01-15 10:33:10 INFO User login: bob@email.com
+2024-01-15 10:34:22 WARN Cache nearing capacity
+2024-01-15 10:35:48 INFO Background job started
+2024-01-15 10:36:02 ERROR Failed to send email
+2024-01-15 10:36:35 INFO Background job completed
+2024-01-15 10:37:21 ERROR Disk write failure
+2024-01-15 10:38:15 INFO System heartbeat
+2024-01-15 10:39:45 INFO System heartbeat
+2024-01-15 10:40:30 WARN High CPU usage: 92%
+2024-01-15 10:41:10 INFO User login: carol@email.com
+2024-01-15 10:42:22 INFO Fetching user profile
+2024-01-15 10:43:05 WARN Low disk space: 5%
+2024-01-15 10:44:20 INFO User logout: bob@email.com
+2024-01-15 10:45:50 INFO System heartbeat
+2024-01-15 10:46:33 INFO Cleanup job executed
+2024-01-15 10:47:12 INFO Shutdown signal received

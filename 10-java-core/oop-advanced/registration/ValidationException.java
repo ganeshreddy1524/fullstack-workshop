@@ -1,4 +1,4 @@
-package oop-advanced.registration;
+package oopadvanced.registration;
 
 public class ValidationException extends Exception {
     public ValidationException(String message) {
